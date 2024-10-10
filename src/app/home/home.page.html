@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="header-title">WellFit</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-background">
+  <div class="container">
+    <!-- Tarjeta de Bienvenida con icono -->
+    <ion-card class="welcome-card">
+      <ion-img 
+      class="welcome-image" 
+      src="assets/imagen2.jpg"
+      srcset="assets/imagen2@2x.jpg 2x, assets/imagen2@3x.jpg 3x"
+      alt="Imagen de bienvenida" 
+    />
+      <ion-card-header>
+        <ion-card-title>Bienvenido a <strong>WellFit</strong></ion-card-title>
+        <ion-card-subtitle>Monitorea tu salud y bienestar</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>Monitorea tu actividad física, lleva un registro de tus hábitos saludables y mantente motivado para lograr tus objetivos.</p>
+        <ion-button expand="block" routerLink="/activity" aria-label="Ver Actividad">
+          <ion-icon name="pulse-outline" slot="start"></ion-icon>
+          Ver Actividad
+        </ion-button>
+        <ion-button expand="block" routerLink="/nutrition" color="secondary" aria-label="Ver Nutrición">
+          <ion-icon name="nutrition-outline" slot="start"></ion-icon>
+          Ver Nutrición
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Sección de Motivación -->
+    <ion-card class="motivation-card">
+      <ion-card-header>
+        <ion-card-title>¿Estás listo para comenzar?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" routerLink="/goals" color="tertiary" aria-label="Establecer Metas">
+          <ion-icon name="flag-outline" slot="start"></ion-icon>
+          Establecer Metas
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
