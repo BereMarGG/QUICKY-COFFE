@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -6,7 +7,30 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  email: string = '';
+  password: string = '';
+  errorMessage: string = '';
 
-  constructor() {}
+  constructor(private router: Router) {}
 
+  // Simulación de autenticación
+  login() {
+    if (this.validateEmail(this.email) && this.password.length >= 6) {
+      // Simula un inicio de sesión exitoso
+      if (this.email === 'usuario@ejemplo.com' && this.password === '123456') {
+        // Redirigir a la página principal de productos o dashboard
+        this.router.navigate(['/activity']);  // Cambia '/productos' por la ruta deseada
+      } else {
+        this.errorMessage = 'Correo o contraseña incorrectos.';
+      }
+    } else {
+      this.errorMessage = 'Por favor, ingrese un email válido y una contraseña de al menos 6 caracteres.';
+    }
+  }
+
+  // Función para validar el formato del email
+  validateEmail(email: string): boolean {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
 }
