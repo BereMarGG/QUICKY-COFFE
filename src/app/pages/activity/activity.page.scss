@@ -5,7 +5,7 @@ ion-content {
 
 ion-button {
   background: #ffffff; /* Color de fondo del botón */
-  color: #00796b; /* Color de texto del botón, cambie a un verde accesible */
+  color: #00796b; /* Color de texto del botón */
   font-size: 1.125rem; /* Tamaño de fuente relativo */
   font-weight: bold;
   border-radius: 8px;
@@ -71,26 +71,3 @@ ion-label p {
   font-size: 1rem; /* Tamaño de fuente relativo */
 }
 
-
-/* Estilos para tabletas */
-@media (min-width: 600px) {
-  ion-button {
-    font-size: 1.5rem; /* Aumentar el tamaño de fuente en pantallas más grandes */
-  }
-
-  .welcome-card, .motivation-card {
-    max-width: 500px; /* Aumentar el ancho máximo de las tarjetas */
-  }
-}
-
-/* Estilos para computadoras de escritorio */
-@media (min-width: 1024px) {
-  .container {
-    flex-direction: row; /* Cambiar a disposición en fila en pantallas grandes */
-    justify-content: space-around; /* Espaciado uniforme entre los elementos */
-  }
-
-  ion-button {
-    font-size: 1.75rem; /* Aumentar aún más el tamaño de fuente */
-  }
-}
