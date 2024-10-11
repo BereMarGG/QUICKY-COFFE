@@ -23,23 +23,16 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('./pages/settings/settings.module').then( m => m.SettingsPageModule)
   },
+  {
+    path: 'productos',
+    loadChildren: () => import('./productos/productos.module').then( m => m.ProductosPageModule)
+  },
+  {
+    path: 'registro',
+    loadChildren: () => import('./registro/registro.module').then( m => m.RegistroPageModule)
+  },
 ];
 
-// const routes: Routes = [
-//   { path: '', redirectTo: 'home', pathMatch: 'full' },
-//   {
-//    path: 'home',
-//    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
-//   },
-//   {
-//    path: 'activity',
-//    loadChildren: () => import('./pages/activity/activity.module').then(m => m.ActivityPageModule)
-//   },
-//   {
-//    path: 'settings',
-//    loadChildren: () => import('./pages/settings/settings.module').then(m => m.SettingsPageModule)
-//   },
-//   ];
 
 @NgModule({
   imports: [

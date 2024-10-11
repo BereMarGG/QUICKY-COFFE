@@ -1,0 +1,23 @@
+.register-container {
+    padding: 20px;
+  }
+  
+  .register-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  ion-button {
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  ion-text {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
