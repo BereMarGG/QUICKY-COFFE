@@ -20,8 +20,12 @@ export class RegistroPage implements OnInit {
   // Método para registrar al usuario
   register() {
     if (this.validateEmail(this.email) && this.passwordsMatch()) {
-      // Simular el registro exitoso
-      this.router.navigate(['/home']); // Redirigir al login después del registro
+      // Guardar los datos del usuario registrado en localStorage
+      localStorage.setItem('registeredEmail', this.email);
+      localStorage.setItem('registeredPassword', this.password);
+
+      // Redirigir al login después del registro
+      this.router.navigate(['/home']);
     } else {
       this.errorMessage = 'Por favor, verifique los datos ingresados.';
     }
@@ -38,4 +42,3 @@ export class RegistroPage implements OnInit {
     return this.password === this.confirmPassword;
   }
 }
-

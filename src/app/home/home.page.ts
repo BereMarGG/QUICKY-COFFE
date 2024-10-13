@@ -15,11 +15,15 @@ export class HomePage {
 
   // Simulación de autenticación
   login() {
+    // Obtener los datos almacenados en localStorage
+    const storedEmail = localStorage.getItem('registeredEmail');
+    const storedPassword = localStorage.getItem('registeredPassword');
+
     if (this.validateEmail(this.email) && this.password.length >= 6) {
-      // Simula un inicio de sesión exitoso
-      if (this.email === 'usuario@ejemplo.com' && this.password === '123456') {
+      // Verificar si las credenciales coinciden con las almacenadas
+      if (this.email === storedEmail && this.password === storedPassword) {
         // Redirigir a la página principal de productos o dashboard
-        this.router.navigate(['/activity']);  // Cambia '/productos' por la ruta deseada
+        this.router.navigate(['/activity']); // Cambia '/productos' por la ruta deseada
       } else {
         this.errorMessage = 'Correo o contraseña incorrectos.';
       }

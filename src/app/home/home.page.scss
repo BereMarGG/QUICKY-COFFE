@@ -42,3 +42,66 @@ ion-text {
   margin-top: 10px;
   font-weight: bold;
 }
+
+
+/* Estilos generales */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+}
+
+/* Media queries para dispositivos más pequeños (móviles) */
+@media (max-width: 576px) {
+  .login-card {
+    padding: 20px;
+    width: 90%;
+  }
+
+  ion-card-title {
+    font-size: 1.4rem;
+  }
+
+  ion-input {
+    font-size: 1rem;
+  }
+}
+
+/* Media queries para tablets y pantallas medianas */
+@media (min-width: 577px) and (max-width: 768px) {
+  .login-card {
+    padding: 25px;
+    width: 80%;
+  }
+
+  ion-card-title {
+    font-size: 1.6rem;
+  }
+
+  ion-input {
+    font-size: 1.1rem;
+  }
+}
+
+/* Media queries para pantallas grandes (desktop) */
+@media (min-width: 769px) {
+  .login-card {
+    width: 50%;
+  }
+
+  ion-card-title {
+    font-size: 1.8rem;
+  }
+
+  ion-input {
+    font-size: 1.2rem;
+  }
+}
