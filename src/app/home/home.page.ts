@@ -23,7 +23,7 @@ export class HomePage {
       // Verificar si las credenciales coinciden con las almacenadas
       if (this.email === storedEmail && this.password === storedPassword) {
         // Redirigir a la página principal de productos o dashboard
-        this.router.navigate(['/activity']); // Cambia '/productos' por la ruta deseada
+        this.router.navigate(['/inicio']); // Cambia '/productos' por la ruta deseada
       } else {
         this.errorMessage = 'Correo o contraseña incorrectos.';
       }
