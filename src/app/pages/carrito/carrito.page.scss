@@ -1,0 +1,74 @@
+ion-content {
+    --background: #f0f0f5; /* Fondo suave para la página */
+    padding: 16px;
+  }
+  
+  ion-button {
+    background: #ffffff; /* Color de fondo del botón */
+    color: #00796b; /* Color de texto del botón */
+    font-size: 1.125rem; /* Tamaño de fuente relativo */
+    font-weight: bold;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: background-color 0.2s, transform 0.2s; /* Transiciones suaves */
+  }
+  
+  ion-button:hover,
+  ion-button:focus {
+    outline: 2px solid #cf45a6; /* Borde de enfoque */
+    outline-offset: 4px;
+    background: #e0e0e0; /* Cambio de color de fondo en hover */
+    transform: scale(1.02); /* Efecto de escalado en hover */
+  }
+  
+  /* Estilos para la lista */
+  ion-list {
+    margin-top: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    background: #ffffff; /* Fondo blanco para la lista */
+  }
+  
+  /* Estilo para cada ion-item */
+  ion-item {
+    border-bottom: 1px solid #e0e0e0;
+    margin: 8px 16px;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background-color 0.2s, transform 0.2s; /* Transición suave */
+  }
+  
+  ion-item:last-child {
+    border-bottom: none; /* Eliminar el borde del último elemento */
+  }
+  
+  /* Icono de la actividad */
+  .activity-icon {
+    font-size: 1.75rem; /* Tamaño de icono relativo */
+    color: #00796b; /* Color del icono */
+    margin-right: 12px;
+  }
+  
+  /* Estilo cuando se selecciona o se enfoca un ion-item */
+  ion-item:hover,
+  ion-item:focus {
+    background-color: #e0f7fa; /* Fondo con contraste alto */
+    outline: 2px solid #00796b; /* Borde de enfoque */
+    outline-offset: 4px;
+    transform: scale(1.01); /* Efecto de escalado al enfocar */
+  }
+  
+  /* Asegurar que los elementos tengan suficiente contraste */
+  ion-label h2 {
+    color: #000; /* Color negro para mejor contraste */
+    font-size: 1.25rem; /* Tamaño de fuente relativo */
+    font-weight: bold;
+    margin-bottom: 4px;
+  }
+  
+  ion-label p {
+    color: #555; /* Color de texto con buen contraste */
+    font-size: 1rem; /* Tamaño de fuente relativo */
+  }
+  
+  

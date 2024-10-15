@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carrito</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <!-- Bienvenida o mensaje de inicio -->
+
+    <!-- Select con botón al lado -->
+    <ion-row>
+      <ion-col size="8" size-md="6" size-lg="4">
+        <ion-item>
+          <ion-label>Selecciona una opción</ion-label>
+          <ion-select placeholder="Elige" [(ngModel)]="selectedOption">
+            <ion-select-option *ngFor="let option of optiones" [value]="option">
+
+              {{option}}
+
+            </ion-select-option>
+            
+          </ion-select>
+        </ion-item>
+      </ion-col>
+
+      <ion-col size="4" size-md="3" size-lg="2">
+        <ion-button expand="block" color="success" aria-label="Confirmar selección" (click)="saveOption()">
+          <ion-icon slot="start" name="checkmark-circle-outline"></ion-icon> 
+          Confirmar
+        </ion-button>
+      </ion-col>
+    </ion-row>
+
+
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title>Opciones Guardadas</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-grid>
+              <!-- Encabezado de la tabla -->
+              <ion-row>
+                <ion-col size="12" size-md="6">
+                  <strong>Productos Agregados al carrito</strong>
+                </ion-col>
+                <ion-col>
+                  <strong>Cantidad</strong>
+                </ion-col>
+                <ion-col>
+                  <strong>Eliminar</strong>
+                </ion-col>
+              </ion-row>
+              
+              <!-- Mostrar las opciones guardadas en una tabla -->
+              <ion-row *ngFor="let saved of opcion_guarda; let i = index">
+                <ion-col size="12" size-md="6">
+                  {{ i + 1 }}. {{ saved }}
+                </ion-col>
+    
+                <ion-col>
+                  <ion-item>
+                
+                    <ion-input type="number" [(ngModel)]="cantidades[i]" min="1"></ion-input>
+                  </ion-item>
+                </ion-col>
+    
+                <!-- Botones de edición y eliminación -->
+                <ion-col>
+     
+    
+                  <ion-button fill="outline" color="danger" (click)="deleteActivity(i)" aria-label="Eliminar">
+                    <ion-icon name="trash-outline"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+
+      <ion-col size="4" size-md="3" size-lg="2">
+        <ion-button expand="block" color="success" aria-label="Confirmar selección" (click)="pagar_carrito()">
+          <ion-icon slot="start" name="checkmark-circle-outline"></ion-icon> 
+          Pagar
+        </ion-button>
+      </ion-col>
+
+
+    </ion-row>
+    
+
+  </ion-grid>
+</ion-content>
