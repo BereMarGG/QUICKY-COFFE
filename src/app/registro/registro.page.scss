@@ -1,23 +1,128 @@
+.home-background {
+  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.header-title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  color: #3e3e3e;
+}
+
 .register-container {
-    padding: 20px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 10px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.register-image {
+  width: 50vw; 
+  max-width: 200px; 
+  height: auto; 
+  margin: 0 auto 20px auto; 
+  display: block;
+}
+
+ion-card-title {
+  text-align: center; 
+  font-size: 1.5rem;
+}
+
+form {
+  width: 100%; /* Asegúrate de que el formulario ocupe todo el ancho disponible */
+}
+
+ion-item {
+  margin-bottom: 10px; /* Espaciado entre los campos de entrada */
+}
+
+ion-button {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+ion-button:hover,
+ion-button:focus {
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+ion-text {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+// .register-image {
+//   width: 50vw; 
+//   max-width: 200px; 
+//   height: auto; 
+//   margin: 0 auto 20px auto; 
+//   display: block;
+// }
+
+/* Estilos para el botón de "Iniciar Sesión" */
+ion-button.secondary {
+  margin-top: 20px;
+  background-color: #004085; /* Color azul oscuro */
+  color: white;
+}
+
+/* Media queries para dispositivos más pequeños (móviles) */
+@media (max-width: 576px) {
   .register-card {
-    width: 100%;
-    max-width: 400px;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
   }
-  
-  ion-button {
-    border-radius: 12px;
-    font-size: 16px;
-    font-weight: 600;
+
+  ion-card-title {
+    font-size: 1.4rem;
   }
-  
-  ion-text {
-    margin-top: 10px;
-    font-weight: bold;
+
+  ion-input {
+    font-size: 1rem;
   }
-  
+}
+
+/* Media queries para tablets y pantallas medianas */
+@media (min-width: 577px) and (max-width: 768px) {
+  .register-card {
+    padding: 25px;
+    width: 80%;
+  }
+
+  ion-card-title {
+    font-size: 1.6rem;
+  }
+
+  ion-input {
+    font-size: 1.1rem;
+  }
+}
+
+/* Media queries para pantallas grandes (desktop) */
+@media (min-width: 769px) {
+  .register-card {
+    width: 50%;
+  }
+
+  ion-card-title {
+    font-size: 1.8rem;
+  }
+
+  ion-input {
+    font-size: 1.2rem;
+  }
+}

@@ -1,50 +1,7 @@
 .home-background {
-  --background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  --background: #ffffff; // Ajusta el color de fondo si es necesario
 }
 
-.header-title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  color: #3e3e3e;
-}
-
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  padding: 20px;
-}
-
-.login-card {
-  width: 100%;
-  max-width: 400px;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-ion-button {
-  border-radius: 12px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-ion-button:hover,
-ion-button:focus {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-}
-
-ion-text {
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-
-/* Estilos generales */
 .login-container {
   display: flex;
   justify-content: center;
@@ -54,54 +11,49 @@ ion-text {
 }
 
 .login-card {
-  width: 100%;
-  max-width: 400px;
-  margin: auto;
+  width: 100%; // Ancho completo del contenedor
+  max-width: 400px; // Limita el ancho en pantallas más grandes
+  margin: 20px auto;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Añade sombra para darle algo de profundidad
 }
 
-/* Media queries para dispositivos más pequeños (móviles) */
-@media (max-width: 576px) {
+.login-image {
+  width: 80%;
+  max-width: 200px;
+  margin: 0 auto;
+  display: block;
+}
+
+ion-card-title {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+ion-item {
+  --highlight-height: 2px;
+  margin-bottom: 10px;
+}
+
+ion-text {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+// Añadir media queries para ajustar el diseño en pantallas más pequeñas
+@media (max-width: 768px) {
   .login-card {
-    padding: 20px;
-    width: 90%;
+    padding: 15px;
+    margin: 15px;
+  }
+
+  .login-image {
+    max-width: 150px;
   }
 
   ion-card-title {
-    font-size: 1.4rem;
-  }
-
-  ion-input {
-    font-size: 1rem;
-  }
-}
-
-/* Media queries para tablets y pantallas medianas */
-@media (min-width: 577px) and (max-width: 768px) {
-  .login-card {
-    padding: 25px;
-    width: 80%;
-  }
-
-  ion-card-title {
-    font-size: 1.6rem;
-  }
-
-  ion-input {
-    font-size: 1.1rem;
-  }
-}
-
-/* Media queries para pantallas grandes (desktop) */
-@media (min-width: 769px) {
-  .login-card {
-    width: 50%;
-  }
-
-  ion-card-title {
-    font-size: 1.8rem;
-  }
-
-  ion-input {
     font-size: 1.2rem;
   }
 }
