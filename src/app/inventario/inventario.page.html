@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Inventario</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="addItem()">Agregar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="1"><strong>ID</strong></ion-col>
+      <ion-col size="3"><strong>Nombre</strong></ion-col>
+      <ion-col size="2"><strong>Cantidad</strong></ion-col>
+      <ion-col size="2"><strong>Precio</strong></ion-col>
+      <ion-col size="4"><strong>Acciones</strong></ion-col>
+    </ion-row>
+
+    <ion-row *ngFor="let item of items">
+      <ion-col size="1">{{ item.id }}</ion-col>
+      <ion-col size="3">{{ item.nombre }}</ion-col>
+      <ion-col size="2">{{ item.cantidad }}</ion-col>
+      <ion-col size="2">{{ item.precio }}</ion-col>
+      <ion-col size="4">
+        <!-- Reemplazar botón de estatus por un ion-toggle -->
+        <ion-toggle
+          [checked]="item.status === 'activo'"
+          (ionChange)="changeStatus($event, item)">
+        </ion-toggle>
+        <ion-button size="small" color="secondary" (click)="editItem(item)">Editar</ion-button>
+        <ion-button size="small" color="danger" (click)="deleteItem(item)">Eliminar</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
